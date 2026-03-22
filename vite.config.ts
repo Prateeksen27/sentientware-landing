@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/portfolio/',
+  base: '/sentientware-landing/',
   build: {
     sourcemap: true,
     chunkSizeWarningLimit: 1600,
@@ -38,3 +38,6 @@ export default defineConfig({
     force: true,
   },
 });
+
+
+
