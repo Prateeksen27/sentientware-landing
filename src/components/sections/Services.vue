@@ -19,9 +19,7 @@
         <p
           class="heading-4 font-fancy col-span-8 w-full text-balance sm:font-semibold md:col-span-5"
         >
-          User-Friendly interface don't happen by chance, they are built with
-          intention. I code intuitive responsive solutions that make your users'
-          journey effortless
+          We build cutting-edge digital solutions that transform businesses and drive growth. From web applications to AI-powered systems, we deliver excellence in every project.
         </p>
       </div>
     </div>
@@ -50,39 +48,58 @@
   import { onBeforeMount, onMounted, ref } from 'vue';
   import { ServicesCard } from '..';
 
-  const whatIDo = ref('My services /');
+  const whatIDo = ref('What We Do /');
 
   const servicesCardProps = [
     {
       title: 'Web Development',
-      body: 'I create custom-coded websites specifically for your brand. I focus on making sure they are scalable, fast, accessible, and have engaging animations to provide a memorable experience for users.',
-      headings: ['Modern Websites', 'Motion & Animations', 'Scalability'],
+      body: 'Full-stack web applications using Vue.js, React, Node.js. Responsive, fast, and SEO-optimized websites with custom CMS and e-commerce platforms.',
+      headings: ['Vue.js & React', 'Node.js Backend', 'E-commerce'],
       shape: `<svg viewBox="0 0 200 200"  xmlns="http://www.w3.org/2000/svg">
   <path d="M100 0C103.395 53.7596 146.24 96.6052 200 100C146.24 103.395 103.395 146.24 100 200C96.6052 146.24 53.7596 103.395 0 100C53.7596 96.6052 96.6052 53.7596 100 0Z"/>
   </svg>
   `,
     },
     {
-      title: 'Advanced Solutions',
-      body: 'I specialize in developing advanced web applications that redefine the possibilities of online platforms, crafting progressive web apps and integrating complex systems.',
-      headings: [
-        'Progressive Web Apps',
-        'Complex Integrations',
-        'Innovative Tech Solutions',
-      ],
+      title: 'Mobile App Development',
+      body: 'Cross-platform mobile apps for iOS & Android built with React Native and Flutter. Smooth UX with modern UI design and seamless performance.',
+      headings: ['React Native', 'Flutter', 'iOS & Android'],
       shape: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <path d="M127.14 200C99.9942 200 99.9943 167.423 72.8487 167.423C41.6048 167.423 0 158.386 0 127.133C0 99.9885 32.5678 99.9885 32.5678 72.8445C32.5678 41.6139 41.6048 0 72.8602 0C100.006 0 100.006 32.5774 127.151 32.5774C158.384 32.5774 200 41.6139 200 72.8675C200 100.012 167.421 100.012 167.421 127.156C167.409 158.444 158.384 200 127.14 200Z" />
   </svg>
   `,
     },
     {
-      title: 'Code Optimization',
-      body: 'Your website deserves to be seen, speed, and responsiveness. By optimizing load times, improving user experiences, I ensure your site runs smoothly and efficiently.',
-      headings: [
-        'Modern Frameworks',
-        'Responsive Design',
-        'Speed Optimization',
-      ],
+      title: 'AI & Data Solutions',
+      body: 'Machine learning models and data pipelines. Intelligent automation, chatbots, and data analytics dashboards for actionable business insights.',
+      headings: ['ML Models', 'Chatbots', 'Data Analytics'],
+      shape: `<svg  viewBox="0 0 200 200"  xmlns="http://www.w3.org/2000/svg">
+  <path d="M100 0L170.711 29.2893L200 100L170.711 170.711L100 200L29.2893 170.711L0 100L29.2893 29.2893L100 0Z" />
+  </svg>
+  `,
+    },
+    {
+      title: 'Cloud & DevOps',
+      body: 'Cloud infrastructure setup on AWS, GCP, Azure. CI/CD pipelines and containerization with Docker and Kubernetes for scalable deployments.',
+      headings: ['AWS & Azure', 'Docker & K8s', '24/7 Monitoring'],
+      shape: `<svg viewBox="0 0 200 200"  xmlns="http://www.w3.org/2000/svg">
+  <path d="M100 0C103.395 53.7596 146.24 96.6052 200 100C146.24 103.395 103.395 146.24 100 200C96.6052 146.24 53.7596 103.395 0 100C53.7596 96.6052 96.6052 53.7596 100 0Z"/>
+  </svg>
+  `,
+    },
+    {
+      title: 'UI/UX Design',
+      body: 'User research and wireframing. High-fidelity prototypes in Figma with design systems and brand identity for memorable user experiences.',
+      headings: ['Figma Prototypes', 'Design Systems', 'Brand Identity'],
+      shape: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <path d="M127.14 200C99.9942 200 99.9943 167.423 72.8487 167.423C41.6048 167.423 0 158.386 0 127.133C0 99.9885 32.5678 99.9885 32.5678 72.8445C32.5678 41.6139 41.6048 0 72.8602 0C100.006 0 100.006 32.5774 127.151 32.5774C158.384 32.5774 200 41.6139 200 72.8675C200 100.012 167.421 100.012 167.421 127.156C167.409 158.444 158.384 200 127.14 200Z" />
+  </svg>
+  `,
+    },
+    {
+      title: 'IT Consulting & Support',
+      body: 'Technology strategy and digital transformation. Code audits, performance optimization, and dedicated technical support and maintenance.',
+      headings: ['Strategy', 'Code Audits', '24/7 Support'],
       shape: `<svg  viewBox="0 0 200 200"  xmlns="http://www.w3.org/2000/svg">
   <path d="M100 0L170.711 29.2893L200 100L170.711 170.711L100 200L29.2893 170.711L0 100L29.2893 29.2893L100 0Z" />
   </svg>
@@ -91,7 +108,7 @@
   ];
 
   onBeforeMount(() => {
-    whatIDo.value = textSplitterIntoChar('What I do /', true);
+    whatIDo.value = textSplitterIntoChar('What We Do /', true);
   });
 
   onMounted(() => {
@@ -109,6 +126,18 @@
 
     if (index === 2) {
       return 'top-[calc(20vh_+_11.5em)] mb-[5.75em]';
+    }
+
+    if (index === 3) {
+      return 'top-[calc(20vh_+_17.25em)] mb-[0em]';
+    }
+
+    if (index === 4) {
+      return 'top-[calc(20vh_+_23em)] mb-[-5.75em]';
+    }
+
+    if (index === 5) {
+      return 'top-[calc(20vh_+_28.75em)] mb-[-11.5em]';
     }
   };
 </script>
