@@ -34,10 +34,10 @@
         </div>
 
         <!-- Main Grid -->
-        <div class="lg:column-gap spacing-t grid w-full grid-cols-12 gap-8">
+        <div class="grid w-full grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-8">
 
           <!-- Left -->
-          <div class="col-span-full flex flex-col items-start gap-10 sm:col-span-5">
+          <div class="col-span-full flex flex-col items-start gap-6 sm:col-span-5 lg:col-span-4">
             <p class="company-tag font-mono text-xs uppercase tracking-[0.3em] text-emerald-600 border border-emerald-500/30 bg-emerald-500/5 px-3 py-1.5 rounded-sm cursor-default hover:bg-emerald-500/10 transition-colors"
               @mouseenter="isPulsing = true" @mouseleave="isPulsing = false">
               <span :class="{ 'animate-pulse': isPulsing }">●</span> {{ companyTag }}
@@ -71,7 +71,7 @@
 
           <!-- Center: Code Card -->
           <div id="profile-container"
-            class="group relative col-span-4 mt-10 h-[28vh] max-w-lg sm:mt-0 sm:h-full md:flex md:h-[52vh]"
+            class="group relative col-span-1 mt-8 h-[35vh] max-w-lg sm:mt-0 sm:h-[45vh] lg:col-span-4 lg:h-[52vh]"
             @mouseenter="isCodeHovered = true" @mouseleave="isCodeHovered = false">
             <div
               class="code-card h-full w-full overflow-hidden rounded-lg border border-emerald-500/20 bg-[#0d1117] relative transition-all duration-300"
@@ -108,8 +108,8 @@
           </div>
 
           <!-- Right -->
-          <div class="col-span-8 size-full text-end sm:col-span-3">
-            <div class="mt-10 flex w-full flex-col items-end gap-4 sm:mt-0">
+          <div class="col-span-1 mt-8 size-full text-start sm:mt-0 sm:col-span-3 lg:col-span-4 lg:text-end">
+            <div class="flex w-full flex-col gap-4 sm:items-end">
 
               <div
                 class="group w-full cursor-default rounded-lg border border-emerald-500/25 bg-emerald-500/[0.06] px-6 py-5 text-right relative overflow-hidden transition-all duration-300 hover:border-emerald-400/40 hover:bg-emerald-500/[0.1]">
@@ -126,7 +126,7 @@
                 </h3>
               </div>
 
-              <div class="flex w-full gap-3">
+              <div class="flex w-full flex-col gap-3 sm:flex-row">
                 <div v-for="(stat, idx) in stats" :key="stat.label"
                   class="stat-item group flex-1 cursor-default border border-flax-smoke-500/10 bg-flax-smoke-500/5 p-3 text-center rounded-md transition-all duration-200 hover:border-emerald-500/30 hover:bg-emerald-500/5"
                   :style="{ animationDelay: `${idx * 100}ms` }">
@@ -142,13 +142,13 @@
         </div>
 
         <!-- Bottom Row -->
-        <div class="mt-12 flex w-full items-center justify-between border-t border-flax-smoke-500/[0.06] pt-6">
+        <div class="mt-10 flex w-full flex-col items-center justify-between gap-4 border-t border-flax-smoke-500/[0.06] pt-6 sm:flex-row sm:gap-0">
           <span
-            class="select-none font-fancy text-[clamp(48px,7vw,90px)] font-bold tracking-tighter text-flax-smoke-500/[0.08] uppercase">Build</span>
+            class="select-none font-fancy text-[clamp(32px,6vw,90px)] font-bold tracking-tighter text-flax-smoke-500/[0.08] uppercase hidden sm:block">Build</span>
           <span class="font-mono text-[10px] uppercase tracking-[0.25em] text-flax-smoke-500/30 scroll-hint">↓ Scroll to
             explore ↓</span>
           <span
-            class="select-none font-fancy text-[clamp(48px,7vw,90px)] font-bold tracking-tighter text-flax-smoke-500/[0.08] uppercase">Innovate</span>
+            class="select-none font-fancy text-[clamp(32px,6vw,90px)] font-bold tracking-tighter text-flax-smoke-500/[0.08] uppercase hidden sm:block">Innovate</span>
         </div>
 
       </div>
